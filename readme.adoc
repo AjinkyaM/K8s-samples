@@ -1,2 +1,20 @@
 Java application with a taste of Kubernetes
 -------------------------------------------
+
+== Application
+. Run application:
+
+	cd app
+	mvn spring-boot:run
+
+. Test application
+
+	curl http://localhost:8080/hello
+
+== Build and Test using Docker
+
+=== Build Docker Image using https://github.com/GoogleContainerTools/jib[Jib]
+
+. Create Docker image:
+
+    mvn compile jib:build -Pjib
